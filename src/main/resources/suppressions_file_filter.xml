@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suppressions [
+<!ELEMENT suppressions (suppress*)>
+<!ELEMENT suppress EMPTY>
+<!ATTLIST suppress files CDATA #REQUIRED
+                   checks CDATA #REQUIRED
+                   lines CDATA #IMPLIED
+                   columns CDATA #IMPLIED>
+]>
+<suppressions>
+<suppress files=".*jar" checks=".*" />
+<suppress files=".*class" checks=".*" />
+<suppress files=".*xml" checks=".*" />
+<suppress files=".*xsl" checks=".*" />
+<suppress files=".*png" checks=".*" />
+<suppress files=".*css" checks=".*" />
+<suppress files=".*js" checks=".*" />
+
+<!-- skip 3rd party files. -->
+
+<suppress files=".*Test.java" checks="PackageHtml" />
+<suppress files=".*Test.java" checks="MagicNumber" />
+<suppress files=".*Exception.java" checks="MagicNumber" />
+
+<suppress files=".*[\\/]generated[\\/].*.java" checks=".*" />
+
+
+</suppressions>
